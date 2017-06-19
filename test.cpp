@@ -86,6 +86,9 @@ int main(int argc, char* argv[]){
 		printf("\nPassword: OK\n");
 	else
 		printf("\nPassword: ERROR\n");
+	//Heloo
+	//hello world
+	//C++  C++ C++
 
 	//char hello[5];
 
