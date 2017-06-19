@@ -1,0 +1,5 @@
+итого 80
+-rwxrwxr-x 1 user user  9048 июн 11 00:05 a.out
+-rwxrwxr-x 1 user user 64752 июн 12 22:50 prog
+-rw-rw-r-- 1 user user   328 июн 12 22:50 test.c
+-rw-rw-r-- 1 user user     0 июн 12 22:50 test.txt
