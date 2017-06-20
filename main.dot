@@ -1,0 +1,35 @@
+digraph code {
+	graph [bgcolor=white fontsize=8 fontname="Courier"];
+	node [fillcolor=gray style=filled shape=box];
+	edge [arrowhead="vee"];
+	"0x00400f9d" -> "0x00400ffc" [color="green"];
+	"0x00400f9d" -> "0x00400fe6" [color="red"];
+	"0x00400f9d" [URL="main/0x00400f9d", fillcolor="lightgray", color="black", label="  ;-- main:\l/ (fcn) main 398\l|   main ();\l| ; var int local_50h @ rbp-0x50\l| ; var int local_44h @ rbp-0x44\l| ; var int local_34h @ rbp-0x34\l| ; var int local_30h @ rbp-0x30\l| ; var int local_28h @ rbp-0x28\l| ; var int local_20h @ rbp-0x20\l| ; var int local_1eh @ rbp-0x1e\l| ; var int local_1ch @ rbp-0x1c\l| ; var int local_8h @ rbp-0x8\l| 0x00400f9d      push rbp\l| 0x00400f9e      mov rbp, rsp\l| 0x00400fa1      sub rsp, 0x50\l| 0x00400fa5      mov dword [local_44h], edi\l| 0x00400fa8      mov qword [local_50h], rsi\l| 0x00400fac      mov rax, qword fs:[0x28]\l| 0x00400fb5      mov qword [local_8h], rax\l| 0x00400fb9      xor eax, eax\l| 0x00400fbb      mov rax, qword obj.stderr__GLIBC_2.2.5\l| 0x00400fc2      mov rcx, rax\l| 0x00400fc5      mov edx, 0xd\l| 0x00400fca      mov esi, 1\l| 0x00400fcf      mov edi, str.server_start_n\l| 0x00400fd4      call sym.imp.fwrite\l| 0x00400fd9      mov dword [local_34h], 0x3039\l| 0x00400fe0      cmp dword [local_44h], 1\l| 0x00400fe4      jle 0x400ffc\l"]
+	"0x00400fe6" -> "0x00400ffc" [color="blue"];
+	"0x00400fe6" [URL="main/0x00400fe6", fillcolor="lightgray", color="black", label="| 0x00400fe6      mov rax, qword [local_50h]\l| 0x00400fea      add rax, 8\l| 0x00400fee      mov rax, qword [rax]\l| 0x00400ff1      mov rdi, rax\l| 0x00400ff4      call sym.imp.atoi\l| 0x00400ff9      mov dword [local_34h], eax\l"]
+	"0x00400ffc" -> "0x0040100b" [color="green"];
+	"0x00400ffc" -> "0x00401002" [color="red"];
+	"0x00400ffc" [URL="main/0x00400ffc", fillcolor="lightgray", color="black", label="| 0x00400ffc      cmp dword [local_34h], 0\l| 0x00401000      js 0x40100b\l"]
+	"0x00401002" -> "0x00401033" [color="green"];
+	"0x00401002" -> "0x0040100b" [color="red"];
+	"0x00401002" [URL="main/0x00401002", fillcolor="lightgray", color="black", label="| 0x00401002      cmp dword [local_34h], 0xffff\l| 0x00401009      jle 0x401033\l"]
+	"0x0040100b" -> "0x00401115" [color="blue"];
+	"0x0040100b" [URL="main/0x0040100b", fillcolor="lightgray", color="black", label="| 0x0040100b      mov rax, qword obj.stderr__GLIBC_2.2.5\l| 0x00401012      mov rcx, rax\l| 0x00401015      mov edx, 0x3b\l| 0x0040101a      mov esi, 1\l| 0x0040101f      mov edi, str._________________________________________________________._n\l| 0x00401024      call sym.imp.fwrite\l| 0x00401029      mov eax, 0xffffffff\l| 0x0040102e      jmp 0x401115\l"]
+	"0x00401033" -> "0x0040106b" [color="green"];
+	"0x00401033" -> "0x00401043" [color="red"];
+	"0x00401033" [URL="main/0x00401033", fillcolor="lightgray", color="black", label="| 0x00401033      call sym.imp.event_base_new\l| 0x00401038      mov qword [local_30h], rax\l| 0x0040103c      cmp qword [local_30h], 0\l| 0x00401041      jne 0x40106b\l"]
+	"0x00401043" -> "0x00401115" [color="blue"];
+	"0x00401043" [URL="main/0x00401043", fillcolor="lightgray", color="black", label="| 0x00401043      mov rax, qword obj.stderr__GLIBC_2.2.5\l| 0x0040104a      mov rcx, rax\l| 0x0040104d      mov edx, 0x40\l| 0x00401052      mov esi, 1\l| 0x00401057      mov edi, str.____________________________________________________event_base._n\l| 0x0040105c      call sym.imp.fwrite\l| 0x00401061      mov eax, 0xffffffff\l| 0x00401066      jmp 0x401115\l"]
+	"0x0040106b" -> "0x004010f3" [color="green"];
+	"0x0040106b" -> "0x004010e2" [color="red"];
+	"0x0040106b" [URL="main/0x0040106b", fillcolor="lightgray", color="black", label="| 0x0040106b      lea rax, [local_20h]\l| 0x0040106f      mov edx, 0x10\l| 0x00401074      mov esi, 0\l| 0x00401079      mov rdi, rax\l| 0x0040107c      call sym.imp.memset\l| 0x00401081      mov word [local_20h], 2\l| 0x00401087      mov edi, 0\l| 0x0040108c      call sym.imp.htonl\l| 0x00401091      mov dword [local_1ch], eax\l| 0x00401094      mov eax, dword [local_34h]\l| 0x00401097      movzx eax, ax\l| 0x0040109a      mov edi, eax\l| 0x0040109c      call sym.imp.htons\l| 0x004010a1      mov word [local_1eh], ax\l| 0x004010a5      lea rdx, [local_20h]\l| 0x004010a9      mov rax, qword [local_30h]\l| 0x004010ad      sub rsp, 8\l| 0x004010b1      push 0x10\l| 0x004010b3      mov r9, rdx\l| 0x004010b6      mov r8d, 0xffffffff\l| 0x004010bc      mov ecx, 0xa\l| 0x004010c1      mov edx, 0\l| 0x004010c6      mov esi, sym.accept_connection_cb\l| 0x004010cb      mov rdi, rax\l| 0x004010ce      call sym.imp.evconnlistener_new_bind\l| 0x004010d3      add rsp, 0x10\l| 0x004010d7      mov qword [local_28h], rax\l| 0x004010db      cmp qword [local_28h], 0\l| 0x004010e0      jne 0x4010f3\l"]
+	"0x004010e2" -> "0x00401115" [color="blue"];
+	"0x004010e2" [URL="main/0x004010e2", fillcolor="lightgray", color="black", label="| 0x004010e2      mov edi, str.____________________________________________________evconnlistener\l| 0x004010e7      call sym.imp.perror\l| 0x004010ec      mov eax, 0xffffffff\l| 0x004010f1      jmp 0x401115\l"]
+	"0x004010f3" -> "0x00401115" [color="blue"];
+	"0x004010f3" [URL="main/0x004010f3", fillcolor="lightgray", color="black", label="| 0x004010f3      mov rax, qword [local_28h]\l| 0x004010f7      mov esi, sym.accept_error_cb\l| 0x004010fc      mov rdi, rax\l| 0x004010ff      call sym.imp.evconnlistener_set_error_cb\l| 0x00401104      mov rax, qword [local_30h]\l| 0x00401108      mov rdi, rax\l| 0x0040110b      call sym.imp.event_base_dispatch\l| 0x00401110      mov eax, 0\l"]
+	"0x00401115" -> "0x00401129" [color="green"];
+	"0x00401115" -> "0x00401124" [color="red"];
+	"0x00401115" [URL="main/0x00401115", fillcolor="lightgray", color="black", label="| 0x00401115      mov rcx, qword [local_8h]\l| 0x00401119      xor rcx, qword fs:[0x28]\l| 0x00401122      je 0x401129\l"]
+	"0x00401124" [URL="main/0x00401124", fillcolor="lightgray", color="black", label="| 0x00401124      call sym.imp.__stack_chk_fail\l"]
+	"0x00401129" [URL="main/0x00401129", fillcolor="lightgray", color="black", label="| 0x00401129      leave\l\\ 0x0040112a      ret\l"]
+}
