@@ -1,9 +1,9 @@
 all: server client
 
 server: server.c
-		gcc -ggdb -O0 -o server server.c -levent
+		gcc -o server server.c -levent -ggdb -O0
 client:
-		gcc -ggdb -O0 -o client client.c -levent
+		gcc -o client client.c -levent -ggdb -O0
 clean: 
 		rm server client
 

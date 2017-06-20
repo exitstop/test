@@ -11,6 +11,7 @@
 /* Функция обратного вызова для события: данные готовы для чтения в buf_ev */
 static void echo_read_cb( struct bufferevent *buf_ev, void *arg )
 {
+//    printf("read");
     struct evbuffer *buf_input = bufferevent_get_input( buf_ev );
     struct evbuffer *buf_output = bufferevent_get_output( buf_ev );
     /* Данные просто копируются из буфера ввода в буфер вывода */
@@ -19,6 +20,7 @@ static void echo_read_cb( struct bufferevent *buf_ev, void *arg )
 
 static void echo_event_cb( struct bufferevent *buf_ev, short events, void *arg )
 {
+    fprintf(stderr,"echo event cb\n");
     if( events & BEV_EVENT_ERROR )
         perror( "Ошибка объекта bufferevent" );
     if( events & (BEV_EVENT_EOF | BEV_EVENT_ERROR) )
@@ -29,6 +31,7 @@ static void accept_connection_cb( struct evconnlistener *listener,
         evutil_socket_t fd, struct sockaddr *addr, int sock_len,
         void *arg )
 {
+    fprintf(stderr,"accept_connetction\n");
     /* При обработке запроса нового соединения необходимо создать для него
        объект bufferevent */
     struct event_base *base = evconnlistener_get_base( listener );
@@ -49,6 +52,7 @@ static void accept_error_cb( struct evconnlistener *listener, void *arg )
 
 int main( int argc, char **argv )
 {
+    fprintf(stderr,"server start\n");
     struct event_base *base;
     struct evconnlistener *listener;
     struct sockaddr_in sin;
@@ -60,7 +64,7 @@ int main( int argc, char **argv )
         fprintf( stderr, "Задан некорректный номер порта.\n" );
         return -1;
     }
-
+ 
     base = event_base_new();
     if( !base )
     {
