@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+//comnet 0
 void bufev_callback( struct bufferevent *buf_ev, short events, void *ptr )
 {
   if( events & BEV_EVENT_CONNECTED )
